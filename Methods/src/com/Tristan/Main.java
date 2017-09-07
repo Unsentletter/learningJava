@@ -18,7 +18,7 @@ public class Main {
         highScore = calculateScore(gameOver, score, levelCompleted, bonus);
         System.out.println(highScore);
 
-        int highScorePosition = calculateHighScorePosition(1500);
+        int highScorePosition = calculateHighScorePosition(1000);
         displayHighScorePosition("Trit", highScorePosition);
 
         highScorePosition = calculateHighScorePosition(900);
@@ -45,11 +45,11 @@ public class Main {
     }
 
     public static int calculateHighScorePosition(int score) {
-        if(score >1000) {
+        if(score >=1000) {
             return 1;
-        } else if (score >500 && score <1000) {
+        } else if (score >=500 && score <1000) {
             return 2;
-        } else if (score >100 && score <500) {
+        } else if (score >=100 && score <500) {
             return 3;
         } else {
             return 4;
