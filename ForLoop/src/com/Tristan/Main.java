@@ -15,15 +15,17 @@ public class Main {
 //            System.out.println("interest at " + i + "% = " + String.format("%.2f",calculateInterest(10000.0, i)));
 //        }
 
-        for(int i=0; i < 100; i++) {
+        int primeCount = 0;
 
-            int primeCount = 0;
-
-            case primeCount < 3
+        for(int i=5000; i < 10000; i++) {
 
             if(isPrime(i)) {
                 primeCount++;
                 System.out.println(i);
+                if(primeCount == 3) {
+                    System.out.println("exiting loop");
+                    break;
+                }
             }
 
         }
