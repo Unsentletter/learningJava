@@ -13,8 +13,6 @@ class Car {
         this.engine = true;
     }
 
-    public 
-
     public String getName() {
         return name;
     }
@@ -23,24 +21,103 @@ class Car {
         return cylinders;
     }
 
-    public int getWheels() {
-        return wheels;
+    public String startEngine() {
+        return "Car -> Start engine";
     }
 
-    public boolean isEngine() {
-        return engine;
+    public String accelerate() {
+        return "Car -> Accelerate";
+    }
+
+    public String brake() {
+        return "Car -> Brake!!!!";
     }
 }
 
 class BroomCar extends Car {
-    public BroomCar() {
-        super("BroomCar", 3);
+    public BroomCar(String name, int cylinders) {
+        super(name, cylinders);
+    }
+
+    @Override
+    public String startEngine() {
+        return "BroomCar -> Start engine";
+    }
+
+    @Override
+    public String accelerate() {
+        return "BroomCar -> Accelerate";
+    }
+
+    @Override
+    public String brake() {
+        return "BroomCar -> Brake!!!!";
+    }
+}
+
+class Car2 extends Car {
+    public Car2(String name, int cylinders) {
+        super(name, cylinders);
+    }
+
+    @Override
+    public String startEngine() {
+        return "Car2 -> Start engine";
+    }
+
+    @Override
+    public String accelerate() {
+        return "Car2 -> Accelerate";
+    }
+
+    @Override
+    public String brake() {
+        return "Car2 -> Brake!!!!";
+    }
+}
+
+class Car3 extends Car {
+    public Car3(String name, int cylinders) {
+        super(name, cylinders);
+    }
+
+    @Override
+    public String startEngine() {
+        return "Car3 -> Start engine";
+    }
+
+    @Override
+    public String accelerate() {
+        return "Car3 -> Accelerate";
+    }
+
+    @Override
+    public String brake() {
+        return "Car3 -> Brake!!!!";
     }
 }
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Car car = new Car("CARRRY CAR", 6);
+        System.out.println(car.startEngine());
+        System.out.println(car.accelerate());
+        System.out.println(car.brake());
+
+        BroomCar broomCar = new BroomCar("another car", 4);
+        System.out.println(broomCar.startEngine());
+        System.out.println(broomCar.accelerate());
+        System.out.println(broomCar.brake());
+
+        Car2 car2 = new Car2("car2", 4);
+        System.out.println(car2.startEngine());
+        System.out.println(car2.accelerate());
+        System.out.println(car2.brake());
+
+        Car3 car3 = new Car3("car3", 4);
+        System.out.println(car3.startEngine());
+        System.out.println(car3.accelerate());
+        System.out.println(car3.brake());
     }
 }
