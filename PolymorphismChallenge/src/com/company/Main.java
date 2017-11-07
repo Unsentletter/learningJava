@@ -41,7 +41,7 @@ class BroomCar extends Car {
 
     @Override
     public String startEngine() {
-        return "BroomCar -> Start engine";
+        return getClass().getSimpleName() + " -> Start engine";
     }
 
     @Override
