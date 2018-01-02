@@ -27,7 +27,7 @@ public class Main {
         album.addSong("Happy", 4.10);
         albums.add(album);
 
-        LinkedList<Song> playlist = new LinkedList<Song>();
+        List<Song> playlist = new ArrayList<Song>();
         albums.get(0).addToPlaylist("song 1", playlist);
         albums.get(0).addToPlaylist("song 2", playlist);
         albums.get(0).addToPlaylist("song", playlist);
@@ -36,7 +36,7 @@ public class Main {
         play(playlist);
     }
 
-    private static void play(LinkedList<Song> playlist) {
+    private static void play(List<Song> playlist) {
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean forward = true;
@@ -134,7 +134,7 @@ public class Main {
                 "6 - Delete current song from playlist");
     }
 
-    private static void printList(LinkedList<Song> playlist) {
+    private static void printList(List<Song> playlist) {
         Iterator<Song> iterator = playlist.iterator();
         System.out.println("=========");
         while(iterator.hasNext()) {
@@ -143,3 +143,4 @@ public class Main {
         System.out.println("=========");
     }
 }
+
